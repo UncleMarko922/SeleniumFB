@@ -22,7 +22,6 @@ namespace SeleniumFB
             const string friendFullName = "fsl";
             const string driverPath = "C:\\users\\marko\\onedrive\\documents\\visual studio 2015\\Projects\\SeleniumFB\\SeleniumFB\\drivers\\chrome";
 
-           
 
             var friendList = new List<FriendStatus>();
 
@@ -47,9 +46,10 @@ namespace SeleniumFB
             Stopwatch s = new Stopwatch();
             s.Start();
 
-            while (s.Elapsed < TimeSpan.FromSeconds(30)) { 
-            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
-            js.ExecuteScript("window.scrollTo(0, document.body.scrollHeight);");
+            while (s.Elapsed < TimeSpan.FromSeconds(30)) 
+            { 
+                IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+                js.ExecuteScript("window.scrollTo(0, document.body.scrollHeight);");
             }
 
             s.Stop();
@@ -69,6 +69,7 @@ namespace SeleniumFB
                 {
                     friendStatus.active = false;
                 }
+
                 friendList.Add(friendStatus);
             }
 
