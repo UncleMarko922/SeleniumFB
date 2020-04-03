@@ -10,5 +10,6 @@ namespace SeleniumFB
     {
         public bool active = true;
         public string name;
+        string testThing;
     }
 }
